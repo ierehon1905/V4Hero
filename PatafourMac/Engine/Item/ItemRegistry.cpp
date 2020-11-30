@@ -7,6 +7,8 @@
 #include "Weapon.h"
 #include "Mask.h"
 #include "Armour.h"
+#include "ResourcePath.hpp"
+
 using namespace std;
 
 ItemRegistry::ItemRegistry(){
@@ -17,7 +19,7 @@ void ItemRegistry::ReadItemFiles()
     /** REWORK THIS!!!!! The code can be more efficient and nice looking. **/
 
     vector<std::string> itemPaths;
-    ifstream conf("resources/data/itemdata/aaa_item_registry.txt");
+    ifstream conf(resourcePath() + "resources/data/itemdata/aaa_item_registry.txt");
     if(conf.good())
     {
         string line;
@@ -40,9 +42,9 @@ void ItemRegistry::ReadItemFiles()
     bool quit=false;
     for (int i=0;i<itemPaths.size();i++){
         Item* newItem=new Item();
-        ifstream itemStream("resources/data/itemdata/"+itemPaths[i]+".txt");
+        ifstream itemStream(resourcePath() + "resources/data/itemdata/"+itemPaths[i]+".txt");
 
-        cout << "itemStream(" << "resources/data/itemdata/"+itemPaths[i]+".txt)" << endl;
+        cout << "itemStream(" << resourcePath() << "resources/data/itemdata/"+itemPaths[i]+".txt)" << endl;
 
         if(itemStream.good())
         {

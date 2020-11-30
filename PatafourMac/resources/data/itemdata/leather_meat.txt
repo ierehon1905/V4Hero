@@ -1,0 +1,10 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:9
+name:item_leather_meat
+type:0
+subtype:1
+desc:desc_leather_meat
+icon:leather_meat
+spritesheet:main
+spritesheet_id:3
+altar_order_id:20101

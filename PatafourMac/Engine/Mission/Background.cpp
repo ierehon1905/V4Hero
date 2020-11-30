@@ -3,6 +3,7 @@
 #include <fstream>
 #include "../Func.h"
 #include <iostream>
+#include "ResourcePath.hpp"
 using namespace std;
 
 Background::Background()
@@ -128,7 +129,7 @@ void Background::Load(string bg_name,Config &thisConfigs)
             vector<string> v_params = Func::Split(buff,',');
 
             PSprite ps_temp;
-            ps_temp.loadFromFile("resources/graphics/bg/"+bg_name+"/"+v_params[0],quality);
+            ps_temp.loadFromFile( resourcePath() + "resources/graphics/bg/"+bg_name+"/"+v_params[0],quality);
             ps_temp.setRepeated(true);
             ps_temp.setTextureRect(sf::IntRect(0,0,500000,ps_temp.t.getSize().y));
             ps_temp.setOrigin(10000,ps_temp.getGlobalBounds().height);

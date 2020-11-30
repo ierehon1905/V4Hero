@@ -1,0 +1,7 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:13
+name:item_chaka_drum
+type:0
+subtype:1
+desc:desc_chaka_drum
+icon:chaka_drum

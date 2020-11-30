@@ -49,7 +49,7 @@ Config::Config()
 void Config::LoadConfig(V4Core* core)
 {
     thisCore=core;
-    ifstream conf("config.ini");
+    ifstream conf(resourcePath() + "config.ini");
 
     vector<string> keysCheckList = configKeys;
     vector<string> keysCheckDefaults = configDefaults;
@@ -120,7 +120,14 @@ void Config::LoadConfig(V4Core* core)
 
     /** Load lang from resources/lang/str_ENG.cfg **/
     strRepo.LoadLanguageFiles(GetInt("lang"));
-    fontPath = "fonts/"+strRepo.langFonts[GetInt("lang")-1];
+    fontPath = resourcePath() + "resources/fonts/" + "arial.ttf";// strRepo.langFonts[GetInt("lang")-1];
+//    /Users/leon/Library/Developer/Xcode/DerivedData/PatafourMac-hbqjgoymcvfzyldjwquapbfmvsdc/Build/Products/Debug/PatafourMac.app/Contents/Resources/resources/fonts/p4kakupop-pro.ttf
+    cout << "Value of fontPath is " << fontPath << endl;
+    cout << "Value of langFonts is " << strRepo.langFonts[GetInt("lang")-1] << endl;
+    for (auto l : strRepo.langFonts) {
+        cout << l << endl;
+    }
+    
     cout<<strRepo.GetString(L"language_file_loaded")<<endl;
 }
 

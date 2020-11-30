@@ -1,0 +1,10 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:24
+name:item_digital_blueprint
+type:4
+subtype:1
+desc:desc_digital_blueprint
+icon:digital_blueprint
+spritesheet:main
+spritesheet_id:5
+altar_order_id:10202

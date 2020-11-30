@@ -1,0 +1,15 @@
+// this is a simple weapon. Note that the name and description here are keys from the language localisation files
+id:1
+name:item_wooden_spear
+type:1
+subtype:1
+mindmg:5
+maxdmg:8
+desc:desc_wooden_spear
+crit:0
+attackspeed:0
+icon:wooden_spear
+equip_id:1
+spritesheet:main
+spritesheet_id:14
+altar_order_id:30101

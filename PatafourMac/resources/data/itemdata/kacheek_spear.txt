@@ -1,0 +1,15 @@
+// this is a simple weapon. Note that the name and description here are keys from the language localisation files
+id:30
+name:item_kacheek_spear
+type:1
+subtype:1
+mindmg:10
+maxdmg:22
+desc:desc_kacheek_spear
+crit:0
+attackspeed:0
+icon:kacheek_spear
+equip_id:5
+spritesheet:main
+spritesheet_id:18
+altar_order_id:30106

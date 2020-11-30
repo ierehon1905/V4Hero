@@ -11,6 +11,7 @@
 #include <string>
 #include <iomanip>
 #include <vector>
+#include "ResourcePath.hpp"
 using namespace std;
 
 StringRepository::StringRepository()
@@ -66,7 +67,7 @@ void StringRepository::LoadLanguageFile(wifstream* conf)
 }
 void StringRepository::LoadLanguageFiles(int langNum)
 {
-    ifstream conf("resources/lang/lang.txt");
+    ifstream conf(resourcePath() + "resources/lang/lang.txt");
 
     if(conf.good())
     {
@@ -88,13 +89,13 @@ void StringRepository::LoadLanguageFiles(int langNum)
             }
         }
 
-        wifstream conf2("resources/lang/"+langFiles[langNum-1]+".txt");
+        wifstream conf2(resourcePath() + "resources/lang/"+langFiles[langNum-1]+".txt");
         cout<<"#### Loading language file: "<< langNames[langNum-1] <<endl;
         LoadLanguageFile(&conf2);
     }
     else
     {
-        wifstream conf2("resources/lang/str_ENG.txt");
+        wifstream conf2(resourcePath() + "resources/lang/str_ENG.txt");
         LoadLanguageFile(&conf2);
     }
     conf.close();

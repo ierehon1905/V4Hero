@@ -1,0 +1,15 @@
+// this is a simple weapon. Note that the name and description here are keys from the language localisation files
+id:3
+name:item_steel_spear
+type:1
+subtype:1
+mindmg:7
+maxdmg:13
+desc:desc_steel_spear
+crit:0
+attackspeed:0
+icon:steel_spear
+equip_id:3
+spritesheet:main
+spritesheet_id:16
+altar_order_id:30103

@@ -1,0 +1,5 @@
+# Patafour Entity Param File
+baseHP=0
+baseY=240
+collidable=0
+attackable=0

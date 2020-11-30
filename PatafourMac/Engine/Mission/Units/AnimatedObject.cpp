@@ -9,6 +9,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <chrono>
+#include "ResourcePath.hpp"
 
 AnimatedObject::AnimatedObject()
 {
@@ -833,7 +834,7 @@ void AnimatedObject::applySpear(int id)
 {
     //cout << "Applying spear ID " << id << endl;
 
-    objects[1].tex_obj.loadFromFile("resources/graphics/item/weapon/spear/spear_"+to_string(id)+"_M.png");
+    objects[1].tex_obj.loadFromFile( resourcePath() + "resources/graphics/item/weapon/spear/spear_"+to_string(id)+"_M.png");
     objects[1].s_obj.setTexture(objects[1].tex_obj);
 
     sf::Vector2f a;
@@ -859,7 +860,7 @@ void AnimatedObject::applyHelm(int id)
 {
     //cout << "Applying helm ID " << id << endl;
 
-    objects[2].tex_obj.loadFromFile("resources/graphics/item/armor/helm/helm_"+to_string(id)+"_M.png");
+    objects[2].tex_obj.loadFromFile( resourcePath() + "resources/graphics/item/armor/helm/helm_"+to_string(id)+"_M.png");
     objects[2].s_obj.setTexture(objects[2].tex_obj);
 
     sf::Vector2f a;

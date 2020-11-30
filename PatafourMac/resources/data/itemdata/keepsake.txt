@@ -1,0 +1,7 @@
+// this is definately a thing
+id:15
+name:item_keepsake
+type:0
+subtype:1
+desc:desc_keepsake
+icon:keepsake

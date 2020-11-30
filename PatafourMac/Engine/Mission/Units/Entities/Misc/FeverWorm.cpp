@@ -4,24 +4,24 @@
 #include <iostream>
 #include "../../../../Func.h"
 #include <sstream>
-
+#include "ResourcePath.hpp"
 FeverWorm::FeverWorm()
 {
-    tex_number[2].loadFromFile("resources/graphics/rhythm/worm/2.png");
-    tex_number[3].loadFromFile("resources/graphics/rhythm/worm/3.png");
-    tex_number[4].loadFromFile("resources/graphics/rhythm/worm/4.png");
-    tex_number[5].loadFromFile("resources/graphics/rhythm/worm/5.png");
-    tex_number[6].loadFromFile("resources/graphics/rhythm/worm/6.png");
-    tex_number[7].loadFromFile("resources/graphics/rhythm/worm/7.png");
-    tex_number[8].loadFromFile("resources/graphics/rhythm/worm/8.png");
-    tex_number[9].loadFromFile("resources/graphics/rhythm/worm/9.png");
+    tex_number[2].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/2.png");
+    tex_number[3].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/3.png");
+    tex_number[4].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/4.png");
+    tex_number[5].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/5.png");
+    tex_number[6].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/6.png");
+    tex_number[7].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/7.png");
+    tex_number[8].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/8.png");
+    tex_number[9].loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/9.png");
 
-    tex_c.loadFromFile("resources/graphics/rhythm/worm/c.png");
-    tex_o1.loadFromFile("resources/graphics/rhythm/worm/o1.png");
-    tex_m.loadFromFile("resources/graphics/rhythm/worm/m.png");
-    tex_b.loadFromFile("resources/graphics/rhythm/worm/b.png");
-    tex_o2.loadFromFile("resources/graphics/rhythm/worm/o2.png");
-    tex_exc.loadFromFile("resources/graphics/rhythm/worm/exc.png");
+    tex_c.loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/c.png");
+    tex_o1.loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/o1.png");
+    tex_m.loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/m.png");
+    tex_b.loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/b.png");
+    tex_o2.loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/o2.png");
+    tex_exc.loadFromFile( resourcePath() + "resources/graphics/rhythm/worm/exc.png");
 
     let_c.setTexture(tex_c);
     let_o1.setTexture(tex_o1);

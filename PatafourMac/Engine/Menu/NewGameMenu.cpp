@@ -4,11 +4,12 @@
 #include "../V4Core.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Time.hpp>
+#include "ResourcePath.hpp"
 NewGameMenu::NewGameMenu()
 {
     //ctor
-    f_font.loadFromFile("resources/fonts/patapon.ttf");
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    f_font.loadFromFile( resourcePath() + "resources/fonts/patapon.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
     t_title.setFont(f_font);
 
     t_title.setCharacterSize(112);

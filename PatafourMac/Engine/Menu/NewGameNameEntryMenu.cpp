@@ -9,7 +9,7 @@
 NewGameNameEntryMenu::NewGameNameEntryMenu()
 {
     //ctor
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
     t_promptText.setFont(f_font);
     t_promptText.setCharacterSize(35);
     t_promptText.setFillColor(sf::Color::Red);

@@ -1,0 +1,9 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:34
+name:item_potion_2
+type:0
+subtype:1
+desc:desc_potion_2
+icon:potion_2
+spritesheet:main
+spritesheet_id:24

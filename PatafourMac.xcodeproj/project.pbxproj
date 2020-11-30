@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		35ADD6F2257309F400E7DF18 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35ADD6F1257309F400E7DF18 /* main.cpp */; };
 		35ADD6F825730A1700E7DF18 /* PatafourMac-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35ADD6F725730A1700E7DF18 /* PatafourMac-Info.plist */; };
-		35ADD6FF25730A3B00E7DF18 /* pficon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 35ADD6FA25730A3B00E7DF18 /* pficon.ico */; };
 		35ADD70025730A3B00E7DF18 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35ADD6FB25730A3B00E7DF18 /* LICENSE */; };
 		35ADD70125730A3B00E7DF18 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35ADD6FC25730A3B00E7DF18 /* README.md */; };
 		35ADD70225730A3B00E7DF18 /* resource.rc in Resources */ = {isa = PBXBuildFile; fileRef = 35ADD6FD25730A3B00E7DF18 /* resource.rc */; };
@@ -98,13 +97,17 @@
 		35ADD93925730B5500E7DF18 /* ScreenFade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35ADD8E225730B5500E7DF18 /* ScreenFade.cpp */; };
 		35ADD93A25730B5500E7DF18 /* StringRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35ADD8E525730B5500E7DF18 /* StringRepository.cpp */; };
 		35ADD93B25730B5500E7DF18 /* DebugOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35ADD8E625730B5500E7DF18 /* DebugOut.cpp */; };
+		35C68D0B25751FA400D7E6FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C68D0A25751FA400D7E6FD /* Images.xcassets */; };
+		35C68D0E2575208B00D7E6FD /* pficon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C68D0D2575208B00D7E6FD /* pficon.png */; };
+		35DBBA32257442B20092E853 /* config.ini in Resources */ = {isa = PBXBuildFile; fileRef = 35DBB475257442AF0092E853 /* config.ini */; };
+		35DBBFAF257443C40092E853 /* resources in Resources */ = {isa = PBXBuildFile; fileRef = 35DBBFAE257443C40092E853 /* resources */; };
+		35DBBFB4257449CF0092E853 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35DBBFB3257449CF0092E853 /* ResourcePath.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35ADD6C5257308F100E7DF18 /* PatafourMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatafourMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ADD6F1257309F400E7DF18 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		35ADD6F725730A1700E7DF18 /* PatafourMac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PatafourMac-Info.plist"; sourceTree = "<group>"; };
-		35ADD6FA25730A3B00E7DF18 /* pficon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = pficon.ico; sourceTree = "<group>"; };
 		35ADD6FB25730A3B00E7DF18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		35ADD6FC25730A3B00E7DF18 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		35ADD6FD25730A3B00E7DF18 /* resource.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = resource.rc; sourceTree = "<group>"; };
@@ -282,6 +285,12 @@
 		35ADD8E425730B5500E7DF18 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		35ADD8E525730B5500E7DF18 /* StringRepository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringRepository.cpp; sourceTree = "<group>"; };
 		35ADD8E625730B5500E7DF18 /* DebugOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugOut.cpp; sourceTree = "<group>"; };
+		35C68D0A25751FA400D7E6FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35C68D0D2575208B00D7E6FD /* pficon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pficon.png; sourceTree = "<group>"; };
+		35DBB475257442AF0092E853 /* config.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.ini; sourceTree = "<group>"; };
+		35DBBFAE257443C40092E853 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		35DBBFB2257449CF0092E853 /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		35DBBFB3257449CF0092E853 /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,12 +325,17 @@
 			children = (
 				35ADD70925730AA700E7DF18 /* PatafourMac.entitlements */,
 				35ADD6F1257309F400E7DF18 /* main.cpp */,
+				35DBB475257442AF0092E853 /* config.ini */,
+				35DBBFAE257443C40092E853 /* resources */,
 				35ADD6FB25730A3B00E7DF18 /* LICENSE */,
-				35ADD6FA25730A3B00E7DF18 /* pficon.ico */,
+				35C68D0D2575208B00D7E6FD /* pficon.png */,
+				35DBBFB2257449CF0092E853 /* ResourcePath.hpp */,
+				35DBBFB3257449CF0092E853 /* ResourcePath.mm */,
 				35ADD6FC25730A3B00E7DF18 /* README.md */,
 				35ADD82525730B5500E7DF18 /* Engine */,
 				35ADD6FD25730A3B00E7DF18 /* resource.rc */,
 				35ADD6F725730A1700E7DF18 /* PatafourMac-Info.plist */,
+				35C68D0A25751FA400D7E6FD /* Images.xcassets */,
 			);
 			path = PatafourMac;
 			sourceTree = "<group>";
@@ -724,10 +738,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35ADD6FF25730A3B00E7DF18 /* pficon.ico in Resources */,
+				35C68D0E2575208B00D7E6FD /* pficon.png in Resources */,
+				35DBBFAF257443C40092E853 /* resources in Resources */,
+				35C68D0B25751FA400D7E6FD /* Images.xcassets in Resources */,
 				35ADD6F825730A1700E7DF18 /* PatafourMac-Info.plist in Resources */,
 				35ADD70125730A3B00E7DF18 /* README.md in Resources */,
 				35ADD70025730A3B00E7DF18 /* LICENSE in Resources */,
+				35DBBA32257442B20092E853 /* config.ini in Resources */,
 				35ADD70225730A3B00E7DF18 /* resource.rc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +830,7 @@
 				35ADD91F25730B5500E7DF18 /* Barracks.cpp in Sources */,
 				35ADD8FF25730B5500E7DF18 /* EndFlag.cpp in Sources */,
 				35ADD90125730B5500E7DF18 /* DroppedItem.cpp in Sources */,
+				35DBBFB4257449CF0092E853 /* ResourcePath.mm in Sources */,
 				35ADD8E725730B5500E7DF18 /* Func.cpp in Sources */,
 				35ADD90825730B5500E7DF18 /* Grass2.cpp in Sources */,
 				35ADD93925730B5500E7DF18 /* ScreenFade.cpp in Sources */,
@@ -942,6 +960,7 @@
 		35ADD6DB257308F100E7DF18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = PatafourMac/PatafourMac.entitlements;
@@ -959,6 +978,7 @@
 		35ADD6DC257308F100E7DF18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = PatafourMac/PatafourMac.entitlements;

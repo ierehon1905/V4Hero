@@ -1,6 +1,6 @@
 #include "RhythmController.h"
 #include <iostream>
-
+#include "ResourcePath.hpp"
 using namespace std;
 
 RhythmController::RhythmController()
@@ -12,18 +12,18 @@ RhythmController::RhythmController()
         if(i==0)
         num = "";
 
-        b_pata[i].loadFromFile("resources/sfx/drums/pata"+num+".ogg");
-        b_pon[i].loadFromFile("resources/sfx/drums/pon"+num+".ogg");
-        b_don[i].loadFromFile("resources/sfx/drums/don"+num+".ogg");
-        b_chaka[i].loadFromFile("resources/sfx/drums/chaka"+num+".ogg");
+        b_pata[i].loadFromFile( resourcePath() + "resources/sfx/drums/pata"+num+".ogg");
+        b_pon[i].loadFromFile( resourcePath() + "resources/sfx/drums/pon"+num+".ogg");
+        b_don[i].loadFromFile( resourcePath() + "resources/sfx/drums/don"+num+".ogg");
+        b_chaka[i].loadFromFile( resourcePath() + "resources/sfx/drums/chaka"+num+".ogg");
 
-        b_chpata[i].loadFromFile("resources/sfx/drums/ch_pata"+num+".ogg");
-        b_chpon[i].loadFromFile("resources/sfx/drums/ch_pon"+num+".ogg");
-        b_chdon[i].loadFromFile("resources/sfx/drums/ch_don"+num+".ogg");
-        b_chchaka[i].loadFromFile("resources/sfx/drums/ch_chaka"+num+".ogg");
+        b_chpata[i].loadFromFile( resourcePath() + "resources/sfx/drums/ch_pata"+num+".ogg");
+        b_chpon[i].loadFromFile( resourcePath() + "resources/sfx/drums/ch_pon"+num+".ogg");
+        b_chdon[i].loadFromFile( resourcePath() + "resources/sfx/drums/ch_don"+num+".ogg");
+        b_chchaka[i].loadFromFile( resourcePath() + "resources/sfx/drums/ch_chaka"+num+".ogg");
     }
 
-    b_perfect.loadFromFile("resources/sfx/drums/perfect.ogg");
+    b_perfect.loadFromFile( resourcePath() + "resources/sfx/drums/perfect.ogg");
 
     patterns["pata"] = 0;
     patterns["pon"] = 0;
