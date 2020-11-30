@@ -3,28 +3,29 @@
 #include "Rhythm.h"
 #include "SongController.h"
 #include <cmath>
+#include "ResourcePath.hpp"
 using namespace std;
 
 Rhythm::Rhythm()
 {
-    b_fever_start.loadFromFile("resources/sfx/bgm/fever_start.ogg");
-    b_fever_fail.loadFromFile("resources/sfx/bgm/fever_fail.ogg");
+    b_fever_start.loadFromFile( resourcePath() + "resources/sfx/bgm/fever_start.ogg");
+    b_fever_fail.loadFromFile( resourcePath() + "resources/sfx/bgm/fever_fail.ogg");
 
-    t_drums["pata"].loadFromFile("resources/graphics/rhythm/drums/pata.png");
-    t_drums["pon"].loadFromFile("resources/graphics/rhythm/drums/pon.png");
-    t_drums["don"].loadFromFile("resources/graphics/rhythm/drums/don.png");
-    t_drums["chaka"].loadFromFile("resources/graphics/rhythm/drums/chaka.png");
+    t_drums["pata"].loadFromFile( resourcePath() + "resources/graphics/rhythm/drums/pata.png");
+    t_drums["pon"].loadFromFile( resourcePath() + "resources/graphics/rhythm/drums/pon.png");
+    t_drums["don"].loadFromFile( resourcePath() + "resources/graphics/rhythm/drums/don.png");
+    t_drums["chaka"].loadFromFile( resourcePath() + "resources/graphics/rhythm/drums/chaka.png");
 
     t_drums["pata"].setSmooth(true);
     t_drums["pon"].setSmooth(true);
     t_drums["don"].setSmooth(true);
     t_drums["chaka"].setSmooth(true);
 
-    t_flash.loadFromFile("resources/graphics/rhythm/drums/flash.png");
+    t_flash.loadFromFile( resourcePath() + "resources/graphics/rhythm/drums/flash.png");
     t_flash.setSmooth(true);
 
-    s_badrhythm1.loadFromFile("resources/sfx/level/badrhythm_1.ogg");
-    s_badrhythm2.loadFromFile("resources/sfx/level/badrhythm_2.ogg");
+    s_badrhythm1.loadFromFile( resourcePath() + "resources/sfx/level/badrhythm_1.ogg");
+    s_badrhythm2.loadFromFile( resourcePath() + "resources/sfx/level/badrhythm_2.ogg");
 }
 void Rhythm::Stop()
 {

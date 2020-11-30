@@ -1,0 +1,7 @@
+# syntax comes as follows:
+# mission_ID|location_ID|mission_title_lang_key|mission_description_lang_key|mission_file
+1|1|worldmap_mission_1_title|worldmap_mission_1_description|mis1_1.p4m
+2|2|worldmap_mission_2_title|worldmap_mission_2_description|mis2_1.p4m
+3|2|worldmap_mission_3_title|worldmap_mission_3_description|mis2_2.p4m
+4|3|worldmap_mission_4_title|worldmap_mission_4_description|mis3_1.p4m
+5|3|worldmap_mission_5_title|worldmap_mission_5_description|mis3_2.p4m

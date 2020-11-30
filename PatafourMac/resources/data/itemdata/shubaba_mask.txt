@@ -1,0 +1,12 @@
+// this is a simple mask. Note that the name and description here are keys from the language localisation files
+id:4
+name:item_shubaba_mask
+type:2
+subtype:1
+mindmg:0
+maxdmg:0
+desc:desc_shubaba_mask
+crit:0
+// attackspeed here is 5% reduction: 2.00 -> 1.90
+attackspeed:5
+icon:shubaba_mask

@@ -1,0 +1,54 @@
+Patafour Mission Format v1.0
+
+# Hunting on Shida Valley
+# Repeatable mission with hidden treasure
+
+background=shidavalley
+bgm=Pokkurimakka Rock Theme
+rpc_name=undefined
+rpc_img=wasteland
+
+# spawn function, syntax: 	spawn=id,xpos,xrange,spawnrate_goal,spawnrate_range,base_stat_multiplier,colorize red,green,blue,alpha
+#							spawn=2,1000,500,0,10,1,255,255,255,255
+# unit id 2 (kacheek) will spawn at xpos in range of 1000-1500, with spawn rate 10% (pick 0 from numbers 0-9), and x1 multiplier from kacheek's base statistics (none), and colorize color white (which means no color)
+# set spawnrate_range to 0 for 100% spawn
+
+# fever worm
+spawn=1,-330,0,0,0,1,255,255,255,255
+
+# grass
+spawn=3,500,0,0,0,1,30,140,90,255
+spawn=3,580,0,0,0,1,30,140,90,255
+spawn=3,660,0,0,0,1,30,140,90,255
+spawn=3,1000,0,0,0,1,30,140,90,255
+spawn=3,1080,0,0,0,1,30,140,90,255
+spawn=3,1400,0,0,0,1,30,140,90,255
+spawn=3,1480,0,0,0,1,30,140,90,255
+spawn=3,1560,0,0,0,1,30,140,90,255
+spawn=3,1640,0,0,0,1,30,140,90,255
+spawn=3,1720,0,0,0,1,30,140,90,255
+spawn=3,2500,0,0,0,1,30,140,90,255
+spawn=3,2580,0,0,0,1,30,140,90,255
+spawn=3,3000,0,0,0,1,30,140,90,255
+spawn=3,3080,0,0,0,1,30,140,90,255
+spawn=3,3160,0,0,0,1,30,140,90,255
+spawn=3,4000,0,0,0,1,30,140,90,255
+spawn=3,4080,0,0,0,1,30,140,90,255
+spawn=3,4160,0,0,0,1,30,140,90,255
+spawn=3,4240,0,0,0,1,30,140,90,255
+spawn=3,4320,0,0,0,1,30,140,90,255
+spawn=3,4400,0,0,0,1,30,140,90,255
+
+# kacheeks
+spawn=2,1000,500,0,0,1,255,255,255,255
+spawn=2,1600,500,0,0,1,255,255,255,255
+spawn=2,2300,500,0,0,1,255,255,255,255
+spawn=2,2550,500,0,0,1,255,255,255,255
+spawn=2,2900,500,0,0,1,255,255,255,255
+spawn=2,3600,500,0,0,1,255,255,255,255
+
+# testing
+spawn=7,3000,0,2,3,1,255,255,255,255
+
+# end pole
+spawn=0,5000,0,0,0,1,255,255,255,255

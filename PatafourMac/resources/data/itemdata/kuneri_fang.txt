@@ -1,0 +1,10 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:20
+name:item_kuneri_fang
+type:0
+subtype:1
+desc:desc_kuneri_fang
+icon:kuneri_fang
+spritesheet:main
+spritesheet_id:2
+altar_order_id:20201

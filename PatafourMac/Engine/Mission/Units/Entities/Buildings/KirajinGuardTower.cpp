@@ -19,7 +19,7 @@ void KirajinGuardTower::LoadConfig(Config *thisConfigs)
 
     cur_sound.setVolume(float(thisConfigs->GetInt("masterVolume"))*(float(thisConfigs->GetInt("sfxVolume"))/100.f));
 
-    s_broken.loadFromFile("resources/sfx/level/building_big_broken.ogg");
+    s_broken.loadFromFile( resourcePath() + "resources/sfx/level/building_big_broken.ogg");
 }
 
 void KirajinGuardTower::parseAdditionalData(std::vector<std::string> additional_data)

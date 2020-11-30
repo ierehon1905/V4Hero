@@ -55,7 +55,7 @@ void AltarMenu::Initialise(Config *thisConfigs, V4Core *parent, PatapolisMenu *c
 
     f_font.loadFromFile(thisConfigs->fontPath);
 
-    altar_main.loadFromFile("resources/graphics/ui/altar/altar_main.png", quality, 1);
+    altar_main.loadFromFile( resourcePath() + "resources/graphics/ui/altar/altar_main.png", quality, 1);
 
     altar_title.createText(f_font, 40, sf::Color(111, 71, 51, 255), Func::ConvertToUtf8String(thisConfigs->strRepo.GetUnicodeString(L"altar_title")), q, 1);
     altar_kaching.createText(f_font, 30, sf::Color(111, 71, 51, 255), "0 Ka-ching", q, 1);
@@ -152,7 +152,7 @@ void AltarMenu::ReloadInventory()
                     tmp.r_inner.setFillColor(sf::Color(146,173,217,255));
 
                     ///look up material's icon
-                    tmp.icon.loadFromFile("resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
+                    tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
                     tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                     break;
@@ -163,7 +163,7 @@ void AltarMenu::ReloadInventory()
                     tmp.r_inner.setFillColor(sf::Color(199,221,167,255));
 
                     ///look up material's icon
-                    tmp.icon.loadFromFile("resources/graphics/ui/altar/equip/spear_1.png", q, 1);
+                    tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/equip/spear_1.png", q, 1);
                     tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                     break;
@@ -174,7 +174,7 @@ void AltarMenu::ReloadInventory()
                     tmp.r_inner.setFillColor(sf::Color(199,221,167,255));
 
                     ///look up material's icon
-                    tmp.icon.loadFromFile("resources/graphics/ui/altar/equip/helm_1.png", q, 1);
+                    tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/equip/helm_1.png", q, 1);
                     tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                     break;
@@ -185,7 +185,7 @@ void AltarMenu::ReloadInventory()
                     tmp.r_inner.setFillColor(sf::Color(183,183,183,255));
 
                     ///look up material's icon
-                    tmp.icon.loadFromFile("resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
+                    tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
                     tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                     break;

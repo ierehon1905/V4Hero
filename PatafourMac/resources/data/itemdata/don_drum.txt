@@ -1,0 +1,7 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:14
+name:item_don_drum
+type:0
+subtype:1
+desc:desc_don_drum
+icon:don_drum

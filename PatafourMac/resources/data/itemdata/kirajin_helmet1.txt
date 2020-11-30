@@ -1,0 +1,16 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:36
+name:item_kirajin_helmet1
+type:3
+subtype:1
+desc:desc_kirajin_helmet1
+icon:kirajin_helmet
+hp:20
+crit:0
+attackspeed:0
+mindmg:1
+maxdmg:4
+equip_id:5
+spritesheet:main
+spritesheet_id:26
+altar_order_id:30204

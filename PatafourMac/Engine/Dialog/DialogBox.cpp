@@ -1,6 +1,6 @@
 #include "DialogBox.h"
 #include <iostream>
-
+#include "ResourcePath.hpp"
 using namespace std;
 
 PataDialogBox::PataDialogBox()
@@ -19,7 +19,7 @@ PataDialogBox::PataDialogBox()
         t_options.push_back(tmp);
     }
 
-    arrow.loadFromFile("resources/graphics/ui/dialog/arrow.png", qualitySetting, 1);
+    arrow.loadFromFile( resourcePath() + "resources/graphics/ui/dialog/arrow.png", qualitySetting, 1);
 
     option = t_options.size()-1;
 }*/
@@ -36,7 +36,7 @@ void PataDialogBox::Create(sf::Font font, sf::String text, std::vector<sf::Strin
         t_options.push_back(tmp);
     }
 
-    arrow.loadFromFile("resources/graphics/ui/dialog/arrow.png", qualitySetting, 1);
+    arrow.loadFromFile( resourcePath() + "resources/graphics/ui/dialog/arrow.png", qualitySetting, 1);
 
     option = t_options.size()-1;
 }

@@ -9,7 +9,7 @@
 SaveFileCreatedMenu::SaveFileCreatedMenu()
 {
     //ctor
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
 
 
     isActive=true;

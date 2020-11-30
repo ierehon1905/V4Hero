@@ -1,5 +1,5 @@
 #include "Credits.h"
-
+#include "ResourcePath.hpp"
 Credits::Credits()
 {
 
@@ -33,14 +33,14 @@ void Credits::Initialise(Config* thisConfig, V4Core* parent)
     r_black.setSize({static_cast<float>(thisConfig->GetInt("resX")), static_cast<float>(thisConfig->GetInt("resY"))});
     r_black.setFillColor(sf::Color::Black);
 
-    sb_outro.loadFromFile("resources/sfx/fun/outro.ogg");
-    sb_credits.loadFromFile("resources/sfx/fun/patafour4.ogg");
+    sb_outro.loadFromFile( resourcePath() + "resources/sfx/fun/outro.ogg");
+    sb_credits.loadFromFile( resourcePath() + "resources/sfx/fun/patafour4.ogg");
 
     s_outro.setVolume(float(thisConfig->GetInt("masterVolume"))*(float(thisConfig->GetInt("bgmVolume"))/100.f));
     s_credits.setVolume(float(thisConfig->GetInt("masterVolume"))*(float(thisConfig->GetInt("bgmVolume"))/100.f));
 
     f_font.loadFromFile(thisConfig->fontPath);
-    cn_font.loadFromFile("resources/fonts/dfpop2w9.ttf");
+    cn_font.loadFromFile( resourcePath() + "resources/fonts/dfpop2w9.ttf");
     outro_text.createText(f_font, 36, sf::Color::White, "", thisConfig->GetInt("textureQuality"), 1);
     outro_text.setOutlineThickness(2);
     outro_text.setOutlineColor(sf::Color::Black);
@@ -48,9 +48,9 @@ void Credits::Initialise(Config* thisConfig, V4Core* parent)
 
     anykey.createText(f_font, 36, sf::Color::White, "", thisConfig->GetInt("textureQuality"), 1);
 
-    teaser_1.loadFromFile("resources/graphics/ui/credits/teaser_1.png", thisConfig->GetInt("textureQuality"), 1);
-    teaser_2.loadFromFile("resources/graphics/ui/credits/teaser_2.png", thisConfig->GetInt("textureQuality"), 1);
-    teaser_3.loadFromFile("resources/graphics/ui/credits/teaser_3.png", thisConfig->GetInt("textureQuality"), 1);
+    teaser_1.loadFromFile( resourcePath() + "resources/graphics/ui/credits/teaser_1.png", thisConfig->GetInt("textureQuality"), 1);
+    teaser_2.loadFromFile( resourcePath() + "resources/graphics/ui/credits/teaser_2.png", thisConfig->GetInt("textureQuality"), 1);
+    teaser_3.loadFromFile( resourcePath() + "resources/graphics/ui/credits/teaser_3.png", thisConfig->GetInt("textureQuality"), 1);
 
     addHeaderText(Func::ConvertToUtf8String(config->strRepo.GetUnicodeString(L"credits_creator")));
     addRegularText("Owocek");

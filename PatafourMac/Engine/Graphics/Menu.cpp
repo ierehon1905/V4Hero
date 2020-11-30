@@ -1,11 +1,13 @@
 #include "Menu.h"
 #include "iostream"
 #include "../V4Core.h"
+#include "ResourcePath.hpp"
+
 Menu::Menu()
 {
     //ctor
     isActive = false;
-    b_menu_enter.loadFromFile("resources/sfx/menu/MenuHit2.ogg");
+    b_menu_enter.loadFromFile( resourcePath() + "resources/sfx/menu/MenuHit2.ogg");
 }
 void Menu::Back(){
     /// this should go back to the previous menu or exit.

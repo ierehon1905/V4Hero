@@ -17,8 +17,8 @@ void Kacheek::LoadConfig(Config *thisConfigs)
     AnimatedObject::LoadConfig(thisConfigs,"resources\\units\\entity\\kacheek.p4a");
     AnimatedObject::setAnimationSegment("idle");
 
-    s_startle.loadFromFile("resources/sfx/level/kacheek_startled.ogg");
-    s_dead.loadFromFile("resources/sfx/level/kacheek_dead.ogg");
+    s_startle.loadFromFile( resourcePath() + "resources/sfx/level/kacheek_startled.ogg");
+    s_dead.loadFromFile( resourcePath() + "resources/sfx/level/kacheek_dead.ogg");
 
     cur_sound.setVolume(float(thisConfigs->GetInt("masterVolume"))*(float(thisConfigs->GetInt("sfxVolume"))/100.f));
 }

@@ -1,0 +1,6 @@
+# This is cutscene missiondata for the story mode missions, edit at your own peril! number before pipe is a bool, true if the screen is to be black. then lang file id for string to be shown in the cutscene, then number of seconds to wait before next one.
+1|intro_cutscene_1|4|155|155|255
+1|intro_cutscene_2|4|155|155|255
+1|intro_cutscene_3|3|155|255|255
+1|intro_cutscene_4|3|255|255|255
+0|intro_cutscene_5|3|255|255|255

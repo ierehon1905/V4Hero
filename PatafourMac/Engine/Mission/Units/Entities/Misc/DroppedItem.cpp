@@ -21,8 +21,8 @@ void DroppedItem::LoadConfig(Config *thisConfigs)
 
     manual_spritesheet = true;
 
-    s_item.loadFromFile("resources/sfx/level/picked_item.ogg");
-    s_keyitem.loadFromFile("resources/sfx/level/picked_keyitem.ogg");
+    s_item.loadFromFile( resourcePath() + "resources/sfx/level/picked_item.ogg");
+    s_keyitem.loadFromFile( resourcePath() + "resources/sfx/level/picked_keyitem.ogg");
 
     cur_sound.setVolume(float(thisConfigs->GetInt("masterVolume"))*(float(thisConfigs->GetInt("sfxVolume"))/100.f));
 }

@@ -1,0 +1,9 @@
+English|str_ENG|p4kakupop-pro.ttf
+Russian|str_RUS|dejavusans.ttf
+French|str_FR|roboto.ttf
+Chinese|str_CN|dfpop2w9.ttf
+Esperanto|str_ESP|p4kakupop-pro.ttf
+Spanish|str_SP|p4kakupop-pro-espanol.otf
+Vietnamese|str_VN|roboto.ttf
+Indonesian|str_IND|roboto.ttf
+Brazilian Portugese|str_BPT|roboto.ttf

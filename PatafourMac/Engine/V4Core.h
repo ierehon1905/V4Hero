@@ -14,6 +14,7 @@
 #include "SaveReader.h"
 #include "Menu/NewGameMenu.h"
 #include "TipsUtil.h"
+#include "ResourcePath.hpp"
 //#include "../discord-cpp/discord.h"
 
 #include "Input/InputController.h"

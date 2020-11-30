@@ -1,0 +1,7 @@
+If you wish to add a custom spritesheet, export your spritesheet under 4 different resolution modes:
+_L is exported at 640x360 resolution
+_M is exported at 1280x720 resolution
+_H is exported at 1920x1080 resolution
+_U is exported at 3840x2160 resolution
+Every spritesheet file contains an additional .spr file. This .spr file defines pixel bounds of each texture on the spritesheet. Refer to the main spritesheets to learn how it works.
+In order to make your items a reality, head over to the resources/data/itemdata/ folder, add your items there and specify your custom spritesheet by it's name without the leading "_x" because that's only for different quality purposes.

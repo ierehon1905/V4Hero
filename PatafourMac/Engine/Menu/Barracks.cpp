@@ -17,7 +17,7 @@ std::string to_string_with_precision(const T a_value, const int n = 2)
 Barracks::Barracks()
 {
     //ctor
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
 
     patapon = new Yaripon;
     patapon2 = new Yaripon;
@@ -97,18 +97,18 @@ void Barracks::Initialise(Config *thisConfigs, V4Core *parent, Menu *curParentMe
     t_itemtitle.createText(f_font, 42, sf::Color::Black, "", quality, 2);
 
     ///             ####   BARRACKS MENU BACKGROUND
-    s_background.loadFromFile("resources/graphics/bg/barracks/barracks.png", quality, 2);
+    s_background.loadFromFile( resourcePath() + "resources/graphics/bg/barracks/barracks.png", quality, 2);
 
     ///         highlighted unit
-    s_pon_highlight.loadFromFile("resources/graphics/ui/highlight.png", quality, 2);
+    s_pon_highlight.loadFromFile( resourcePath() + "resources/graphics/ui/highlight.png", quality, 2);
 
     ///             ####   UNIT CLASS ICON
-    class_icon.loadFromFile("resources/graphics/ui/yari_icon.png", quality, 1);
+    class_icon.loadFromFile( resourcePath() + "resources/graphics/ui/yari_icon.png", quality, 1);
     class_icon.setOrigin(class_icon.getLocalBounds().width/2, class_icon.getLocalBounds().height/2);
     class_icon.setPosition(102, 98);
 
     ///             ####   UNIT ITEM ICON
-    s_unit_icon.loadFromFile("resources/graphics/ui/unit_icon.png", quality, 1);
+    s_unit_icon.loadFromFile( resourcePath() + "resources/graphics/ui/unit_icon.png", quality, 1);
     s_unit_icon.setPosition(946, 82);
 
     unit_status.createText(f_font, 22, sf::Color(239, 88, 98, 255), Func::ConvertToUtf8String(thisConfig->strRepo.GetUnicodeString(L"barracks_unit_status")), quality, 1);
@@ -140,19 +140,19 @@ void Barracks::Initialise(Config *thisConfigs, V4Core *parent, Menu *curParentMe
     int equip_height = 50;
 
     ///             ####   WEAPON ITEM ICON
-    s_weapon_icon.loadFromFile("resources/graphics/ui/sword_weapon_icon.png", quality, 1);
+    s_weapon_icon.loadFromFile( resourcePath() + "resources/graphics/ui/sword_weapon_icon.png", quality, 1);
     s_weapon_icon.setPosition(946, s_unit_icon.getPosition().y+equip_height);
 
     ///             ####   WEAPON 2 (OTHER HAND) ITEM ICON
-    s_weapon2_icon.loadFromFile("resources/graphics/ui/sword_weapon_icon.png", quality, 1);
+    s_weapon2_icon.loadFromFile( resourcePath() + "resources/graphics/ui/sword_weapon_icon.png", quality, 1);
     s_weapon2_icon.setPosition(946, s_weapon_icon.getPosition().y+equip_height);
 
     ///             ####   ARMOUR ITEM ICON
-    s_armour_icon.loadFromFile("resources/graphics/ui/helm_icon.png", quality, 1);
+    s_armour_icon.loadFromFile( resourcePath() + "resources/graphics/ui/helm_icon.png", quality, 1);
     s_armour_icon.setPosition(946, s_weapon2_icon.getPosition().y+equip_height);
 
     ///             ####   MASK ITEM ICON
-    s_mask_icon.loadFromFile("resources/graphics/ui/mask_icon.png", quality, 1);
+    s_mask_icon.loadFromFile( resourcePath() + "resources/graphics/ui/mask_icon.png", quality, 1);
     s_mask_icon.setPosition(946, s_armour_icon.getPosition().y+equip_height);
 
     /// unit + item name text
@@ -172,7 +172,7 @@ void Barracks::Initialise(Config *thisConfigs, V4Core *parent, Menu *curParentMe
     t_mask_name.createText(f_font, 24, sf::Color::Black, Func::ConvertToUtf8String(thisConfig->strRepo.GetUnicodeString(L"wooden_spear")), quality, 1);
     t_mask_name.setOrigin(0,t_mask_name.getLocalBounds().height/2);
 
-    inv_box.loadFromFile("resources/graphics/ui/mini_inventory.png", quality, 1);
+    inv_box.loadFromFile( resourcePath() + "resources/graphics/ui/mini_inventory.png", quality, 1);
 
     item_title.createText(f_font, 34, sf::Color::Black, "", quality, 1);
     item_desc.createText(f_font, 22, sf::Color::Black, "", quality, 1);
@@ -185,7 +185,7 @@ void Barracks::Initialise(Config *thisConfigs, V4Core *parent, Menu *curParentMe
     enabledPositons.push_back(false);
 
     qualitySetting = quality;
-    highlighted_pon.loadFromFile("resources/graphics/ui/highlighted_pon.png", qualitySetting, 1);
+    highlighted_pon.loadFromFile( resourcePath() + "resources/graphics/ui/highlighted_pon.png", qualitySetting, 1);
 
     ApplyEquipment();
 
@@ -272,7 +272,7 @@ void Barracks::ReloadInventory()
                         tmp.r_inner.setFillColor(sf::Color(146,173,217,255));
 
                         ///look up material's icon
-                        tmp.icon.loadFromFile("resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
+                        tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
                         tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                         break;
@@ -283,7 +283,7 @@ void Barracks::ReloadInventory()
                         tmp.r_inner.setFillColor(sf::Color(199,221,167,255));
 
                         ///look up material's icon
-                        tmp.icon.loadFromFile("resources/graphics/ui/altar/equip/spear_1.png", q, 1);
+                        tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/equip/spear_1.png", q, 1);
                         tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                         break;
@@ -294,7 +294,7 @@ void Barracks::ReloadInventory()
                         tmp.r_inner.setFillColor(sf::Color(199,221,167,255));
 
                         ///look up material's icon
-                        tmp.icon.loadFromFile("resources/graphics/ui/altar/equip/helm_1.png", q, 1);
+                        tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/equip/helm_1.png", q, 1);
                         tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                         break;
@@ -305,7 +305,7 @@ void Barracks::ReloadInventory()
                         tmp.r_inner.setFillColor(sf::Color(183,183,183,255));
 
                         ///look up material's icon
-                        tmp.icon.loadFromFile("resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
+                        tmp.icon.loadFromFile( resourcePath() + "resources/graphics/ui/altar/materials/"+Func::num_padding(cur_item->spritesheet_id, 4)+".png", q, 1);
                         tmp.icon.setOrigin(tmp.icon.getLocalBounds().width/2, tmp.icon.getLocalBounds().height/2);
 
                         break;

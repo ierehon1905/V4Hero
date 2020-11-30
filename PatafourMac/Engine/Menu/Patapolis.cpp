@@ -8,7 +8,7 @@ PatapolisMenu::PatapolisMenu()
 {
     //ctor
 
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
 
     isActive=false;
 }
@@ -16,7 +16,7 @@ PatapolisMenu::PatapolisMenu()
 void PatapolisMenu::addL6(std::string variant, float x, float y, int q, int r)
 {
     PSprite tmp;
-    tmp.loadFromFile("resources/graphics/bg/patapolis/6"+variant+".png", q, r);
+    tmp.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/6"+variant+".png", q, r);
     tmp.setPosition(x, y);
     layer_6.push_back(tmp);
 }
@@ -24,7 +24,7 @@ void PatapolisMenu::addL6(std::string variant, float x, float y, int q, int r)
 void PatapolisMenu::addL2(std::string variant, float x, float y, int q, int r)
 {
     PSprite tmp;
-    tmp.loadFromFile("resources/graphics/bg/patapolis/2"+variant+".png", q, r);
+    tmp.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/2"+variant+".png", q, r);
     tmp.setPosition(x, y);
     layer_2.push_back(tmp);
 }
@@ -36,7 +36,7 @@ void PatapolisMenu::addSparkle(float x, float y)
     Sparkle tmp;
 
     PSprite sprk;
-    sprk.loadFromFile("resources/graphics/bg/patapolis/sparkle.png", quality, 1);
+    sprk.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/sparkle.png", quality, 1);
     sprk.setPosition(x, y);
     sprk.setScale(scale);
     //sparkles.push_back(sprk);
@@ -63,7 +63,7 @@ void PatapolisMenu::addParagetSparkle(float x, float y)
     int choice = rand() % 3 + 1;
     string nm = "paraget_sparkle_"+to_string(choice)+".png";
 
-    sprk.loadFromFile("resources/graphics/bg/patapolis/"+nm, quality, 1);
+    sprk.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/"+nm, quality, 1);
 
     sprk.setPosition(x, y);
     sprk.setOrigin(sprk.getLocalBounds().width/2, sprk.getLocalBounds().height/2);
@@ -136,11 +136,11 @@ PatapolisMenu::Fire PatapolisMenu::addFire(int type, float x, float y, bool add)
         }
     }
 
-    tmp.fire[0].loadFromFile("resources/graphics/bg/patapolis/"+str_type+"_fire1.png", quality, 1);
-    tmp.fire[1].loadFromFile("resources/graphics/bg/patapolis/"+str_type+"_fire2.png", quality, 1);
-    tmp.fire[2].loadFromFile("resources/graphics/bg/patapolis/"+str_type+"_fire3.png", quality, 1);
+    tmp.fire[0].loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/"+str_type+"_fire1.png", quality, 1);
+    tmp.fire[1].loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/"+str_type+"_fire2.png", quality, 1);
+    tmp.fire[2].loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/"+str_type+"_fire3.png", quality, 1);
 
-    tmp.glow.loadFromFile("resources/graphics/bg/patapolis/"+str_type+"_glow.png", quality, 1);
+    tmp.glow.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/"+str_type+"_glow.png", quality, 1);
 
     tmp.baseX = x;
     tmp.baseY = y;
@@ -172,7 +172,7 @@ void PatapolisMenu::addCloud(std::string type, float x, float y, float xsize, fl
     if(type == "A")
     {
         CloudA cloud;
-        cloud.cloud.loadFromFile("resources/graphics/bg/patapolis/1a.png", q, r);
+        cloud.cloud.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/1a.png", q, r);
         cloud.cloud.baseX = x;
         cloud.cloud.baseY = y;
         cloud.x = x;
@@ -319,8 +319,8 @@ void PatapolisMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curPare
     addL6("d", 9930, 750-floor_height, quality, 1);
     addL6("d", 10040, 737-floor_height, quality, 1);
 
-    L5.loadFromFile("resources/graphics/bg/patapolis/5.png", quality, 1);
-    L4.loadFromFile("resources/graphics/bg/patapolis/4.png", quality, 1);
+    L5.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/5.png", quality, 1);
+    L4.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/4.png", quality, 1);
 
     L5.setPosition(3060, 740-floor_height);
     L4.setPosition(2530, 750-floor_height);
@@ -368,13 +368,13 @@ void PatapolisMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curPare
     addL2("d", 9000, 728-floor_height, quality, 1);
     addL2("d", 10500, 728-floor_height, quality, 1);
 
-    edge.loadFromFile("resources/graphics/bg/patapolis/edge.png", quality, 1);
-    bridge.loadFromFile("resources/graphics/bg/patapolis/bridge.png", quality, 1);
-    rainbow.loadFromFile("resources/graphics/bg/patapolis/rainbow.png", quality, 1);
+    edge.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/edge.png", quality, 1);
+    bridge.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/bridge.png", quality, 1);
+    rainbow.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/rainbow.png", quality, 1);
 
     for(int i=0; i<4; i++)
     {
-        back_layer[i].loadFromFile("resources/graphics/bg/patapolis/back_"+to_string(i+1)+".png", quality, 1);
+        back_layer[i].loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/back_"+to_string(i+1)+".png", quality, 1);
         back_layer[i].setOrigin(0, back_layer[i].getLocalBounds().height);
         back_layer[i].setPosition(back_pos[i], 715);
     }
@@ -397,7 +397,7 @@ void PatapolisMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curPare
     addSparkle(11620 + 937, 401);
     addSparkle(11620 + 860, 244);
 
-    wakapon.loadFromFile("resources/graphics/bg/patapolis/wakapon.png", quality, 1);
+    wakapon.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/wakapon.png", quality, 1);
     wakapon.setPosition(11920, 462);
     wakapon.setOrigin(wakapon.getLocalBounds().width/2, wakapon.getLocalBounds().height);
 
@@ -409,19 +409,19 @@ void PatapolisMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curPare
     a_sen.setAnimationSegment("idle");
     a_sen.global_y = 629;
 
-    world_egg.loadFromFile("resources/graphics/bg/patapolis/egg.png", quality, 1);
+    world_egg.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/egg.png", quality, 1);
     world_egg.setPosition(12215, 462);
     world_egg.setOrigin(world_egg.getLocalBounds().width/2, world_egg.getLocalBounds().height);
 
-    light_1.loadFromFile("resources/graphics/bg/patapolis/light.png", quality, 1);
+    light_1.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/light.png", quality, 1);
     light_1.setPosition(11715, 161);
     light_1.setOrigin(light_1.getLocalBounds().width/2, light_1.getLocalBounds().height/2);
 
-    light_2.loadFromFile("resources/graphics/bg/patapolis/light.png", quality, 1);
+    light_2.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/light.png", quality, 1);
     light_2.setPosition(12720, 161);
     light_2.setOrigin(light_2.getLocalBounds().width/2, light_2.getLocalBounds().height/2);
 
-    egg_light.loadFromFile("resources/graphics/bg/patapolis/egg_light.png", quality, 1);
+    egg_light.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/egg_light.png", quality, 1);
     egg_light.setPosition(12217, 288);
     egg_light.setOrigin(egg_light.getLocalBounds().width/2, egg_light.getLocalBounds().height/2);
 
@@ -470,59 +470,59 @@ void PatapolisMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curPare
         lightrays.push_back(tmp);
     }
 
-    barracks.loadFromFile("resources/graphics/bg/patapolis/barracks.png", quality, 1);
+    barracks.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/barracks.png", quality, 1);
     barracks.setPosition(640, 765-floor_height);
     barracks.setOrigin(barracks.getLocalBounds().width/2, barracks.getLocalBounds().height);
 
-    forge_main.loadFromFile("resources/graphics/bg/patapolis/forge_main.png", quality, 1);
+    forge_main.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/forge_main.png", quality, 1);
     forge_main.setPosition(2300, 720-floor_height);
     forge_main.setOrigin(forge_main.getLocalBounds().width/2, forge_main.getLocalBounds().height);
 
-    forge_back.loadFromFile("resources/graphics/bg/patapolis/blacksmith_forge.png", quality, 1);
+    forge_back.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/blacksmith_forge.png", quality, 1);
     forge_back.setPosition(2300, 720-floor_height-29);
     forge_back.setOrigin(forge_back.getLocalBounds().width/2, forge_back.getLocalBounds().height);
 
-    forge_glow.loadFromFile("resources/graphics/bg/patapolis/blacksmith_forge_glow.png", quality, 1);
+    forge_glow.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/blacksmith_forge_glow.png", quality, 1);
     forge_glow.setPosition(2300, 720-floor_height-178);
     forge_glow.setOrigin(forge_glow.getLocalBounds().width/2, forge_glow.getLocalBounds().height);
 
-    forge_fence.loadFromFile("resources/graphics/bg/patapolis/blacksmith_fence.png", quality, 1);
+    forge_fence.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/blacksmith_fence.png", quality, 1);
     forge_fence.setPosition(2043, 720-floor_height-306);
     forge_fence.setOrigin(forge_fence.getLocalBounds().width/2, 0);
 
-    forge_slab.loadFromFile("resources/graphics/bg/patapolis/slab.png", quality, 1);
+    forge_slab.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/slab.png", quality, 1);
     forge_slab.setPosition(2300-65, 720-floor_height-84);
     forge_slab.setOrigin(forge_slab.getLocalBounds().width/2, forge_slab.getLocalBounds().height);
 
-    forge_slab_glow.loadFromFile("resources/graphics/bg/patapolis/slab_glow.png", quality, 1);
+    forge_slab_glow.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/slab_glow.png", quality, 1);
     forge_slab_glow.setPosition(2300-72, 720-floor_height-92);
     forge_slab_glow.setOrigin(forge_slab_glow.getLocalBounds().width/2, forge_slab_glow.getLocalBounds().height);
 
-    market.loadFromFile("resources/graphics/bg/patapolis/market.png", quality, 1);
+    market.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/market.png", quality, 1);
     market.setPosition(3960, 728-floor_height);
     market.setOrigin(market.getLocalBounds().width/2, market.getLocalBounds().height);
 
-    festival_main.loadFromFile("resources/graphics/bg/patapolis/festival_main.png", quality, 1);
+    festival_main.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/festival_main.png", quality, 1);
     festival_main.setPosition(5620, 720-floor_height);
     festival_main.setOrigin(festival_main.getLocalBounds().width/2, festival_main.getLocalBounds().height);
 
-    altar.loadFromFile("resources/graphics/bg/patapolis/altar.png", quality, 1);
+    altar.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/altar.png", quality, 1);
     altar.setPosition(7280, 720-floor_height);
     altar.setOrigin(altar.getLocalBounds().width/2, altar.getLocalBounds().height);
 
-    obelisk.loadFromFile("resources/graphics/bg/patapolis/obelisk.png", quality, 1);
+    obelisk.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/obelisk.png", quality, 1);
     obelisk.setPosition(8940, 720-floor_height);
     obelisk.setOrigin(obelisk.getLocalBounds().width/2, obelisk.getLocalBounds().height);
 
-    paraget_main.loadFromFile("resources/graphics/bg/patapolis/paraget_main.png", quality, 1);
+    paraget_main.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/paraget_main.png", quality, 1);
     paraget_main.setPosition(10600, 722-floor_height);
     paraget_main.setOrigin(paraget_main.getLocalBounds().width/2, paraget_main.getLocalBounds().height);
 
-    paraget_crystal_glow.loadFromFile("resources/graphics/bg/patapolis/paraget_crystal_glow.png", quality, 1);
+    paraget_crystal_glow.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/paraget_crystal_glow.png", quality, 1);
     paraget_crystal_glow.setPosition(10600, 430);
     paraget_crystal_glow.setOrigin(paraget_crystal_glow.getLocalBounds().width/2, paraget_crystal_glow.getLocalBounds().height/2);
 
-    paraget_crystal.loadFromFile("resources/graphics/bg/patapolis/paraget_crystal.png", quality, 1);
+    paraget_crystal.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/paraget_crystal.png", quality, 1);
     paraget_crystal.setPosition(10600, 430);
     paraget_crystal.setOrigin(paraget_crystal.getLocalBounds().width/2, paraget_crystal.getLocalBounds().height/2);
 
@@ -557,7 +557,7 @@ void PatapolisMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curPare
     forge_big = addFire(2, 2050, 542, false);
     forge_purple = addFire(3, 2370, 404, false);
 
-    p_smoke.loadFromFile("resources/graphics/bg/patapolis/smoke.png", quality, 1);
+    p_smoke.loadFromFile( resourcePath() + "resources/graphics/bg/patapolis/smoke.png", quality, 1);
     p_smoke.setOrigin(p_smoke.getLocalBounds().width/2, p_smoke.getLocalBounds().height/2);
 
     addCloud("A", 9500, 140, 0, 0, quality, 1);

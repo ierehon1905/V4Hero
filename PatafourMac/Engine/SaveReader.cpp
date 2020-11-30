@@ -8,11 +8,13 @@
 #include <cctype>
 #include <string>
 #include "Config.h"
+#include "ResourcePath.hpp"
+
 using namespace std;
 
 SaveReader::SaveReader()
 {
-    ifstream check("resources/data/sv1.p4sv");
+    ifstream check(resourcePath() + "resources/data/sv1.p4sv");
     bool exists = check.good();
     check.close();
 
@@ -41,7 +43,7 @@ void SaveReader::LoadSave(Config& tconfig)
     config = &tconfig;
     debugOut = config->debugOut;
 
-    ifstream conf("resources/data/sv1.p4sv");
+    ifstream conf(resourcePath() + "resources/data/sv1.p4sv");
     if(conf.good())
     {
         string line;
@@ -195,7 +197,7 @@ void SaveReader::CreateBlankSave() ///Creates a blank save data for use
 
 void SaveReader::Save()
 {
-    ofstream conf2("resources/data/sv1.p4sv", ios::ate);
+    ofstream conf2( resourcePath() + "resources/data/sv1.p4sv", ios::ate);
     conf2.seekp(0);
     if(conf2.is_open())
     {

@@ -706,8 +706,8 @@ void MissionController::addUnitThumb(int unit_id)
 {
     UnitThumb tmp;
     tmp.unit_id = unit_id;
-    tmp.hpbar_back.loadFromFile("resources/graphics/mission/hpbar_back.png", qualitySetting, 1);
-    tmp.hpbar_ins.loadFromFile("resources/graphics/mission/hpbar_ins.png", qualitySetting, 1);
+    tmp.hpbar_back.loadFromFile( resourcePath() + "resources/graphics/mission/hpbar_back.png", qualitySetting, 1);
+    tmp.hpbar_ins.loadFromFile( resourcePath() + "resources/graphics/mission/hpbar_ins.png", qualitySetting, 1);
     tmp.unit_count.createText(f_font, 26, sf::Color::White, "", qualitySetting, 1);
     tmp.unit_count_shadow.createText(f_font, 26, sf::Color::Black, "", qualitySetting, 1);
     tmp.width = tmp.hpbar_ins.getLocalBounds().width;
@@ -720,7 +720,7 @@ void MissionController::Initialise(Config &config,std::string backgroundString,V
     //sf::Context context;
 
     PSprite ps_temp;
-    ps_temp.loadFromFile("resources/graphics/item/icon/spear.png",1);
+    ps_temp.loadFromFile( resourcePath() + "resources/graphics/item/icon/spear.png",1);
     ps_temp.setRepeated(false);
     ps_temp.setTextureRect(sf::IntRect(0,0,ps_temp.t.getSize().x,ps_temp.t.getSize().y)); ///affect later with ratio
     ps_temp.setOrigin(ps_temp.t.getSize().x,0);
@@ -770,16 +770,16 @@ void MissionController::Initialise(Config &config,std::string backgroundString,V
     //ctor
     f_font.loadFromFile(config.fontPath);
 
-    if(config.fontPath == "resources/fonts/p4kakupop-pro.ttf")
-    f_moji.loadFromFile("resources/fonts/mojipon.otf");
+    if(config.fontPath == resourcePath() +  "resources/fonts/p4kakupop-pro.ttf")
+    f_moji.loadFromFile( resourcePath() + "resources/fonts/mojipon.otf");
     else
     f_moji.loadFromFile(config.fontPath);
 
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
     t_timerMenu.setFont(f_font);
     t_timerMenu.setCharacterSize(38);
     t_timerMenu.setFillColor(sf::Color::White);
-    //f_font.loadFromFile("resources/fonts/arial.ttf");
+    //f_font.loadFromFile( resourcePath() + "resources/fonts/arial.ttf");
     //t_cutscene_text.setFont(f_font);
 
     //t_cutscene_text.setCharacterSize(35);
@@ -801,12 +801,12 @@ void MissionController::Initialise(Config &config,std::string backgroundString,V
     fade.setSize(sf::Vector2f(800,600));
     currentCutsceneId=0;
 
-    sb_win_jingle.loadFromFile("resources/sfx/level/victory.ogg");
-    sb_lose_jingle.loadFromFile("resources/sfx/level/failure.ogg");
+    sb_win_jingle.loadFromFile( resourcePath() + "resources/sfx/level/victory.ogg");
+    sb_lose_jingle.loadFromFile( resourcePath() + "resources/sfx/level/failure.ogg");
 
-    sb_cheer1.loadFromFile("resources/sfx/level/cheer1.ogg");
-    sb_cheer2.loadFromFile("resources/sfx/level/cheer2.ogg");
-    sb_cheer3.loadFromFile("resources/sfx/level/cheer1.ogg");
+    sb_cheer1.loadFromFile( resourcePath() + "resources/sfx/level/cheer1.ogg");
+    sb_cheer2.loadFromFile( resourcePath() + "resources/sfx/level/cheer2.ogg");
+    sb_cheer3.loadFromFile( resourcePath() + "resources/sfx/level/cheer1.ogg");
 
     t_win.createText(f_moji, 56, sf::Color(222, 83, 0, 255), Func::ConvertToUtf8String(config.strRepo.GetUnicodeString(L"mission_complete")), q, 1);
     t_win_outline.createText(f_moji, 56, sf::Color(255, 171, 0, 255), Func::ConvertToUtf8String(config.strRepo.GetUnicodeString(L"mission_complete")), q, 1);
@@ -823,8 +823,8 @@ void MissionController::Initialise(Config &config,std::string backgroundString,V
     t_lose.setOrigin(t_lose.getLocalBounds().width/2, t_lose.getLocalBounds().height/2);
     t_lose_outline.setOrigin(t_lose_outline.getLocalBounds().width/2, t_lose_outline.getLocalBounds().height/2);
 
-    bar_win.loadFromFile("resources/graphics/mission/bar_win.png", q, 1);
-    bar_lose.loadFromFile("resources/graphics/mission/bar_lose.png", q, 1);
+    bar_win.loadFromFile( resourcePath() + "resources/graphics/mission/bar_win.png", q, 1);
+    bar_lose.loadFromFile( resourcePath() + "resources/graphics/mission/bar_lose.png", q, 1);
 
     bar_win.setOrigin(bar_win.getLocalBounds().width/2, bar_win.getLocalBounds().height/2);
     bar_lose.setOrigin(bar_lose.getLocalBounds().width/2, bar_lose.getLocalBounds().height/2);
@@ -844,11 +844,11 @@ void MissionController::Initialise(Config &config,std::string backgroundString,V
 
     ctrlTips.create(110, f_font, 28, sf::String(L"Onward: □-□-□-O       Attack: O-O-□-O        Defend: △-△-□-O              Charge: O-O-△-△\nRetreat: O-□-O-□          Jump: X-X-△-△          Party: □-O-X-△          Summon: X-XX-XX") ,q, sf::Color(128,128,128,255));
 
-    spear_hit_enemy.loadFromFile("resources/sfx/level/spear_hit_enemy.ogg");
-    spear_hit_iron.loadFromFile("resources/sfx/level/spear_hit_iron.ogg");
-    spear_hit_rock.loadFromFile("resources/sfx/level/spear_hit_rock.ogg");
-    spear_hit_solid.loadFromFile("resources/sfx/level/spear_hit_solid.ogg");
-    s_heal.loadFromFile("resources/sfx/level/picked_heal.ogg");
+    spear_hit_enemy.loadFromFile( resourcePath() + "resources/sfx/level/spear_hit_enemy.ogg");
+    spear_hit_iron.loadFromFile( resourcePath() + "resources/sfx/level/spear_hit_iron.ogg");
+    spear_hit_rock.loadFromFile( resourcePath() + "resources/sfx/level/spear_hit_rock.ogg");
+    spear_hit_solid.loadFromFile( resourcePath() + "resources/sfx/level/spear_hit_solid.ogg");
+    s_heal.loadFromFile( resourcePath() + "resources/sfx/level/picked_heal.ogg");
 
     cout << "initialization finished" << endl;
 }

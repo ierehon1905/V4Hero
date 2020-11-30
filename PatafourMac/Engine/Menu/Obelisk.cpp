@@ -90,27 +90,27 @@ void ObeliskMenu::Initialise(Config *thisConfigs,V4Core *parent, PatapolisMenu *
     }
 
     PSprite i_hunt;
-    i_hunt.loadFromFile("resources/graphics/ui/worldmap/hunting_icon.png", quality, 1);
+    i_hunt.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/hunting_icon.png", quality, 1);
     PSprite i_fortress;
-    i_fortress.loadFromFile("resources/graphics/ui/worldmap/fortress_icon.png", quality, 1);
+    i_fortress.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/fortress_icon.png", quality, 1);
 
     mission_icons.push_back(i_hunt);
     mission_icons.push_back(i_fortress);
 
-    dullpon.loadFromFile("resources/graphics/ui/worldmap/dullpon.png", quality, 1);
+    dullpon.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/dullpon.png", quality, 1);
 
     ///boxes
-    mainbox.loadFromFile("resources/graphics/ui/worldmap/main_box.png", quality, 1);
+    mainbox.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/main_box.png", quality, 1);
     mainbox.setOrigin(mainbox.getLocalBounds().width/2, mainbox.getLocalBounds().height/2);
     mainbox.setPosition(640, 320);
-    descbox.loadFromFile("resources/graphics/ui/worldmap/description_box.png", quality, 1);
+    descbox.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/description_box.png", quality, 1);
     descbox.setOrigin(descbox.getLocalBounds().width/2, descbox.getLocalBounds().height/2);
     descbox.setPosition(820, 542);
-    iconbox.loadFromFile("resources/graphics/ui/worldmap/icon_box.png", quality, 1);
-    missionbox.loadFromFile("resources/graphics/ui/worldmap/mission_box.png", quality, 1);
+    iconbox.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/icon_box.png", quality, 1);
+    missionbox.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/mission_box.png", quality, 1);
     missionbox.setOrigin(missionbox.getLocalBounds().width/2, missionbox.getLocalBounds().height/2);
     missionbox.setPosition(290, 542);
-    missionselect.loadFromFile("resources/graphics/ui/worldmap/mission_select.png", quality, 1);
+    missionselect.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/mission_select.png", quality, 1);
 
     worldmap_title.createText(font, 34, sf::Color::Black, Func::ConvertToUtf8String(thisConfig->strRepo.GetUnicodeString(L"worldmap_header_1")), quality, 1);
     location_title.createText(font, 27, sf::Color::Black, Func::ConvertToUtf8String(thisConfig->strRepo.GetUnicodeString(L"worldmap_location_1_title")), quality, 1);
@@ -121,11 +121,11 @@ void ObeliskMenu::Initialise(Config *thisConfigs,V4Core *parent, PatapolisMenu *
     mission_title.createText(font, 18, sf::Color::Black, "Hunting Kacheek", quality, 1);
     mission_desc.createText(font, 18, sf::Color::Black, "(no translation needed)", quality, 1);
 
-    unavailable.loadFromFile("resources/graphics/ui/worldmap/unavailable.png", quality, 1);
-    location_highlight.loadFromFile("resources/graphics/ui/worldmap/location_highlight.png", quality, 1);
+    unavailable.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/unavailable.png", quality, 1);
+    location_highlight.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/location_highlight.png", quality, 1);
     location_highlight.setOrigin(location_highlight.getLocalBounds().width/2, location_highlight.getLocalBounds().height/2);
 
-    mission_select.loadFromFile("resources/graphics/ui/worldmap/mission_select.png", quality, 1);
+    mission_select.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/mission_select.png", quality, 1);
 
     ctrlTips.create(66, font, 20, sf::String(L"Left/Right: Select field      X: View missions      O: Exit to Patapolis"), quality);
 
@@ -148,15 +148,15 @@ void ObeliskMenu::Reload()
     missions_unlocked = v4core->savereader.missionsUnlocked;
 
     PSprite fld;
-    fld.loadFromFile("resources/graphics/ui/worldmap/location_field.png", quality, 1);
+    fld.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/location_field.png", quality, 1);
 
     ///worldmap contents
     for(int i=1; i<=field_unlocked; i++)
     {
         PSprite bg;
-        bg.loadFromFile("resources/graphics/ui/worldmap/locationbg_"+to_string(i)+".png", quality, 1);
+        bg.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/locationbg_"+to_string(i)+".png", quality, 1);
         PSprite loc;
-        loc.loadFromFile("resources/graphics/ui/worldmap/location_"+to_string(i)+".png", quality, 1);
+        loc.loadFromFile( resourcePath() + "resources/graphics/ui/worldmap/location_"+to_string(i)+".png", quality, 1);
 
         location_bgs.push_back(bg);
         location_icons.push_back(loc);

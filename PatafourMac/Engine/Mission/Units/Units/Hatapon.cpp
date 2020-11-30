@@ -4,7 +4,7 @@
 #include <iostream>
 #include "../../../Func.h"
 #include <sstream>
-
+#include "ResourcePath.hpp"
 Hatapon::Hatapon()
 {
 
@@ -15,9 +15,9 @@ void Hatapon::LoadConfig(Config *thisConfigs)
     /// all (normal) kacheeks have the same animations, so we load them from a hardcoded file
     AnimatedObject::LoadConfig(thisConfigs,"resources\\units\\unit\\hatapon.p4a");
 
-    hit_1.loadFromFile("resources/sfx/level/hit_1.ogg");
-    hit_2.loadFromFile("resources/sfx/level/hit_2.ogg");
-    hit_3.loadFromFile("resources/sfx/level/hit_3.ogg");
+    hit_1.loadFromFile( resourcePath() + "resources/sfx/level/hit_1.ogg");
+    hit_2.loadFromFile( resourcePath() + "resources/sfx/level/hit_2.ogg");
+    hit_3.loadFromFile( resourcePath() + "resources/sfx/level/hit_3.ogg");
 
     cur_sound.setVolume(float(thisConfigs->GetInt("masterVolume"))*(float(thisConfigs->GetInt("sfxVolume"))/100.f));
 

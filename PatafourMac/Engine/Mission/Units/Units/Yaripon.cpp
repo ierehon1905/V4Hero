@@ -4,6 +4,7 @@
 #include <iostream>
 #include "../../../Func.h"
 #include <sstream>
+#include "ResourcePath.hpp"
 Yaripon::Yaripon()
 {
 
@@ -14,13 +15,13 @@ void Yaripon::LoadConfig(Config *thisConfigs)
     AnimatedObject::LoadConfig(thisConfigs,"resources\\units\\unit\\yaripon.p4a");
     setAnimationSegment("idle_armed");
 
-    spear_throw.loadFromFile("resources/sfx/level/spear_throw.ogg");
+    spear_throw.loadFromFile( resourcePath() + "resources/sfx/level/spear_throw.ogg");
 
-    hit_1.loadFromFile("resources/sfx/level/hit_1.ogg");
-    hit_2.loadFromFile("resources/sfx/level/hit_2.ogg");
-    hit_3.loadFromFile("resources/sfx/level/hit_3.ogg");
+    hit_1.loadFromFile( resourcePath() + "resources/sfx/level/hit_1.ogg");
+    hit_2.loadFromFile( resourcePath() + "resources/sfx/level/hit_2.ogg");
+    hit_3.loadFromFile( resourcePath() + "resources/sfx/level/hit_3.ogg");
 
-    s_dead.loadFromFile("resources/sfx/level/dead_2.ogg");
+    s_dead.loadFromFile( resourcePath() + "resources/sfx/level/dead_2.ogg");
 
     cur_sound.setVolume(float(thisConfigs->GetInt("masterVolume"))*(float(thisConfigs->GetInt("sfxVolume"))/100.f));
 

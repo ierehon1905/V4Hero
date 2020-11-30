@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
     //wprintf(L"%s", unicode_text);
 
     ///Fix for buggy CreateProcess not copying the working directory properly
-    string wd = "/Users/leon/Downloads/V4Hero-v1.1.1/resources";
-    wd = wd.substr(0,wd.find_last_of("\\"));
+//    string wd = "/Users/leon/Downloads/V4Hero-v1.1.1/resources";
+//    wd = wd.substr(0,wd.find_last_of("\\"));
 //    SetCurrentDirectoryA(wd.c_str());
 
     V4Core V4;

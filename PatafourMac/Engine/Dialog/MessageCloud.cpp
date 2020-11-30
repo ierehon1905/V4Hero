@@ -1,7 +1,7 @@
 #include "MessageCloud.h"
 
 #include <iostream>
-
+#include "ResourcePath.hpp"
 using namespace std;
 
 MessageCloud::MessageCloud()
@@ -42,7 +42,7 @@ void MessageCloud::Create(int speed, sf::Vector2f start_pos, sf::Color color, bo
 
     font.loadFromFile(font_path);
 
-    cloud[0].loadFromFile("resources/graphics/ui/dialog/message.png", q);
+    cloud[0].loadFromFile( resourcePath() + "resources/graphics/ui/dialog/message.png", q);
     cloud[1] = cloud[0];
     cloud[2] = cloud[0];
     cloud[3] = cloud[0];
@@ -61,9 +61,9 @@ void MessageCloud::Create(int speed, sf::Vector2f start_pos, sf::Color color, bo
 
     cur_color = color;
 
-    cross.loadFromFile("resources/graphics/ui/dialog/cross.png", q, 1);
-    cross_highlight.loadFromFile("resources/graphics/ui/dialog/crosshighlight.png", q, 1);
-    cross_arrow.loadFromFile("resources/graphics/ui/dialog/crossarrow.png", q, 1);
+    cross.loadFromFile( resourcePath() + "resources/graphics/ui/dialog/cross.png", q, 1);
+    cross_highlight.loadFromFile( resourcePath() + "resources/graphics/ui/dialog/crosshighlight.png", q, 1);
+    cross_arrow.loadFromFile( resourcePath() + "resources/graphics/ui/dialog/crossarrow.png", q, 1);
 
     triangle.setPointCount(3);
     triangle.setFillColor(cur_color);

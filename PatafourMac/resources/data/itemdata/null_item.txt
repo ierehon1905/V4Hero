@@ -1,0 +1,7 @@
+// this is a simple item. Note that the name and description here are keys from the language localisation files
+id:22
+name:item_none
+type:0
+subtype:1
+desc:desc_none
+icon:hard_iron

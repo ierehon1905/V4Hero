@@ -6,7 +6,7 @@
 OptionsMenu::OptionsMenu()
 {
     //ctor
-    f_font.loadFromFile("resources/fonts/patapon.ttf");
+    f_font.loadFromFile( resourcePath() + "resources/fonts/patapon.ttf");
     /*t_title.setFont(f_font);
 
     t_title.setCharacterSize(112);
@@ -56,24 +56,24 @@ void OptionsMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curParent
 
     int q = thisConfigs->GetInt("textureQuality");
     cout << "Quality:" << q << endl;
-    bg.loadFromFile("resources/graphics/ui/options/options.png", q, 1);
-    sword.loadFromFile("resources/graphics/ui/options/sword.png", q, 2);
+    bg.loadFromFile( resourcePath() + "resources/graphics/ui/options/options.png", q, 1);
+    sword.loadFromFile( resourcePath() + "resources/graphics/ui/options/sword.png", q, 2);
 
-    handle.loadFromFile("resources/graphics/ui/options/handle.png", q, 1);
+    handle.loadFromFile( resourcePath() + "resources/graphics/ui/options/handle.png", q, 1);
 
-    aura1.loadFromFile("resources/graphics/ui/options/aura.png", q, 1);
-    aura2.loadFromFile("resources/graphics/ui/options/aura.png", q, 1);
+    aura1.loadFromFile( resourcePath() + "resources/graphics/ui/options/aura.png", q, 1);
+    aura2.loadFromFile( resourcePath() + "resources/graphics/ui/options/aura.png", q, 1);
 
-    l_fire1.loadFromFile("resources/graphics/ui/options/l_fire1.png", q, 1);
-    l_fire2.loadFromFile("resources/graphics/ui/options/l_fire2.png", q, 1);
-    l_fire3.loadFromFile("resources/graphics/ui/options/l_fire3.png", q, 1);
+    l_fire1.loadFromFile( resourcePath() + "resources/graphics/ui/options/l_fire1.png", q, 1);
+    l_fire2.loadFromFile( resourcePath() + "resources/graphics/ui/options/l_fire2.png", q, 1);
+    l_fire3.loadFromFile( resourcePath() + "resources/graphics/ui/options/l_fire3.png", q, 1);
 
-    r_fire1.loadFromFile("resources/graphics/ui/options/r_fire1.png", q, 1);
-    r_fire2.loadFromFile("resources/graphics/ui/options/r_fire2.png", q, 1);
-    r_fire3.loadFromFile("resources/graphics/ui/options/r_fire3.png", q, 1);
+    r_fire1.loadFromFile( resourcePath() + "resources/graphics/ui/options/r_fire1.png", q, 1);
+    r_fire2.loadFromFile( resourcePath() + "resources/graphics/ui/options/r_fire2.png", q, 1);
+    r_fire3.loadFromFile( resourcePath() + "resources/graphics/ui/options/r_fire3.png", q, 1);
 
-    dg_restart.loadFromFile("resources/graphics/ui/options/dg_restart.png", q, 1);
-    dg_select.loadFromFile("resources/graphics/ui/options/dg_select.png", q, 2);
+    dg_restart.loadFromFile( resourcePath() + "resources/graphics/ui/options/dg_restart.png", q, 1);
+    dg_select.loadFromFile( resourcePath() + "resources/graphics/ui/options/dg_select.png", q, 2);
 
     t_restart.createText(m_font, 26, sf::Color::Black, Func::ConvertToUtf8String(thisConfigs->strRepo.GetUnicodeString(L"options_restart_notice")), q, 2);
 
@@ -245,7 +245,7 @@ void OptionsMenu::Initialise(Config *thisConfigs,V4Core *parent, Menu *curParent
     lang_pages = page;
 
     ///Input manager (change keybinds)
-    input_manager.loadFromFile("resources/graphics/ui/options/inputmenu.png", q, 1); ///sprite
+    input_manager.loadFromFile( resourcePath() + "resources/graphics/ui/options/inputmenu.png", q, 1); ///sprite
 
     for(int i=0; i<9; i++)
     {
